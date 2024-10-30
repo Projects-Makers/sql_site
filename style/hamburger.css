@@ -69,7 +69,7 @@ body, html {
 }
 
 .menu.open {
-    width: 250px; /* Zmniejsz szerokość dla lepszej responsywności */
+    width: 500px; /* Zmniejsz szerokość dla lepszej responsywności */
 }
 
 .menu ul {
@@ -79,8 +79,17 @@ body, html {
 
 .menu ul li {
     margin-bottom: 20px;
-    font-size: 20px;
 }
+
+.h1 {
+    font-size: 40px;
+}
+
+.h2 {
+    font-size: 30px;
+    float: right;
+}
+
 
 .menu ul li a {
     color: white;
