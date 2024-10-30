@@ -3,57 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style/header.css">
-    <link rel="stylesheet" href="style/footer.css">
-    <link rel="stylesheet" href="style/auth.css">
+    <title>Śląsk</title>
+    <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/hamburger.css">
 </head>
 <body>
     <!-- Nagłówek -->
-    <header>
+    <div id="header">
+        <div id="hamburger" class="hamburger-btn" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <div class="container">
-            <div class="logo">
-                <a href="index.html">Śląsk</a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#" class="btn btn-primary settings-button">Ustawienia</a></li>
-                </ul>
-            </nav>
-            <div class="auth-buttons">
-                <a href="login.html" class="btn">Sign in</a>
-                <a href="register.html" class="btn btn-primary">Sign up</a>
+            <div id="logo">
             </div>
         </div>
-    </header>
+    </div>
 
-    <!-- Menu logowania -->
-    <div class="login-menu">
-        <div class="login-menu-content">
-            <h2>Login</h2>
-            <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit" class="btn btn-primary">Login</button>
-            </form>
+    <!-- Menu -->
+    <div id="menu" class="menu">
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+        </ul>
+    </div>
+
+    <!-- Główna sekcja -->
+    <div id="main">
+        <div class="hero">
+            <div class="container">
+                <h1>Śląsk</h1>
+            </div>
+        </div>
+
+        <div id="features">
+            <div class="container">
+                <div class="feature">
+                    <img src="zdj/mapa.png" alt="Mapa">
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Stopka -->
-    <footer>
+    <div id="footer">
         <div class="container">
             <div class="footer-links">
-                <a href="#">Privacy</a>
-                <a href="#">Security</a>
+                <a href="html/login.html">Privacy</a>
+                <a href="html/register.html">Security</a>
                 <a href="#">Contact</a>
             </div>
             <div class="footer-logo">
                 <a href="#">Logo</a>
             </div>
         </div>
-    </footer>
+    </div>
+
+    <!-- Kod JavaScript na końcu dokumentu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const hamburger = document.getElementById('hamburger');
+            // Przełącz klasę 'open' dla menu i 'active' dla przycisku hamburgera
+            menu.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
