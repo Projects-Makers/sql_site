@@ -92,6 +92,46 @@ body, html {
 }
 
 
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    background-color: #f6f8fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form .btn:hover {
+    background-color: #45a049;
+}
+
+
 /* Stopka */
 #footer {
     background-color: #24292e;
