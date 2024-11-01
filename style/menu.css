@@ -1,0 +1,29 @@
+#menu {
+    width: 0;
+    transition: width 0.3s ease; /* Płynne wysuwanie menu */
+    overflow: hidden; /* Ukryj zawartość, gdy szerokość jest 0 */
+    /* Inne style menu */
+}
+
+#menu.open {
+    width: 400px; /* Szerokość menu przy otwieraniu */
+}
+
+#menu.close {
+    width: 0; /* Natychmiastowe zamknięcie menu */
+    transition: none; /* Usuń animację przy zamykaniu */
+}
+
+.menu ul li {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+    transition: background-color 0.3s ease; /* Efekt płynnego przejścia */
+    padding: 10px; /* Dodanie przestrzeni wokół tekstu */
+    border-radius: 5px; /* Zaokrąglone rogi dla efektu */
+}
+
+.menu ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efekt podświetlenia na hover */
+    cursor: pointer; /* Zmiana kursora, aby wskazywał, że element jest klikalny */
+}
