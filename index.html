@@ -5,26 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Śląsk</title>
     <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/responsive.css">
     <link rel="stylesheet" href="style/hamburger.css">
 </head>
 <body>
     <!-- Nagłówek -->
-    <div id="header">
+    <header id="header">
         <div id="hamburger" class="hamburger-btn" onclick="toggleMenu()">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
         <div class="container">
-            <div id="logo">
-                <a href="#">Logo</a>
-            </div>
         </div>
-    </div>
+    </header>
 
     <!-- Menu boczne -->
-    <div id="menu" class="menu">
+    <nav id="menu" class="menu">
         <div class="menu-top">
             <div class="close-btn" onclick="toggleMenu()">&times;</div>
             <a href="html/login.html" class="auth-btn">Login</a>
@@ -33,38 +29,32 @@
         <ul>
             <li><a href="index.html">Strona główna</a></li>
         </ul>
-    </div>
+    </nav>
 
     <!-- Główna sekcja -->
-    <div id="main">
-        <div class="hero">
+    <main id="main">
+        <section id="tresc">
             <div class="container">
-                <h1>Śląsk</h1>
-            </div>
-        </div>
-
-        <div id="features">
-            <div class="container">
-                <div class="feature">
+                <div class="content">
+                    <h1>Śląsk</h1>
                     <img src="zdj/mapa.png" alt="Mapa Śląska">
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <!-- Stopka -->
-    <div id="footer">
-        <div class="container">
+    <footer id="footer">
             <div class="footer-links">
                 <a href="html/login.html">Privacy</a>
                 <a href="html/register.html">Security</a>
                 <a href="#">Contact</a>
             </div>
             <div class="footer-logo">
-                <a href="#">Logo</a>
+
             </div>
         </div>
-    </div>
+    </footer>
 
     <!-- JavaScript -->
     <script>
