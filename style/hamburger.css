@@ -11,6 +11,9 @@ body, html {
 .container {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Nagłówek */
@@ -25,6 +28,7 @@ body, html {
     justify-content: space-between;
 }
 
+/* Logo */
 #logo a {
     color: white;
     text-decoration: none;
@@ -69,44 +73,61 @@ body, html {
 }
 
 .menu.open {
-    width: 400px; /* Szerokość menu przy otwieraniu */
+    width: 400px;
 }
 
 .menu ul {
     list-style: none;
-    padding: 100px 20px 20px 20px;
+    padding: 20px;
 }
 
 .menu ul li {
+    margin-bottom: 20px;
     font-size: 24px;
     color: white;
+    transition: background-color 0.3s ease;
     padding: 10px;
-    margin-bottom: 20px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Płynne przejścia */
 }
 
 .menu ul li:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Efekt podświetlenia na hover */
+    background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
-    transform: translateX(5px); /* Efekt przesunięcia na hover */
 }
 
-/* Przycisk zamknięcia */
+/* Górna część menu dla przycisków i zamknięcia */
+.menu-top {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 10px; /* Ustawienie odstępów między elementami */
+}
+
 .close-btn {
     font-size: 30px;
     color: white;
-    width: 50px;
-    height: 50px;
-    border: 2px solid white;
-    border-radius: 10px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    position: absolute;
-    left: 20px;
-    top: 20px;
+}
+
+/* Styl przycisków Login i Register */
+.auth-btn {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 2px solid white;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px;
+}
+
+.auth-btn:hover {
+    background-color: white;
+    color: #24292e;
 }
 
 /* Sekcja bohatera */
@@ -120,13 +141,6 @@ body, html {
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
-}
-
-/* Sekcja funkcji */
-.features {
-    padding: 50px 0;
-    text-align: center;
-    flex: 1;
 }
 
 /* Stopka */
@@ -160,4 +174,15 @@ footer {
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .menu.open {
+        width: 100%;
+    }
+    .auth-btn {
+        font-size: 16px;
+        padding: 8px;
+    }
 }

@@ -18,17 +18,20 @@
         </div>
         <div class="container">
             <div id="logo">
+                <a href="#">Logo</a>
             </div>
         </div>
     </div>
 
-    <!-- Menu -->
+    <!-- Menu boczne -->
     <div id="menu" class="menu">
-        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        <div class="menu-top">
+            <div class="close-btn" onclick="toggleMenu()">&times;</div>
+            <a href="html/login.html" class="auth-btn">Login</a>
+            <a href="html/register.html" class="auth-btn">Register</a>
+        </div>
         <ul>
-            <h1><li><a href="index.html">Strona główna</a></li></h1>
-            <h2><li><a href="html/login.html">Login</a></li></h2>
-            <h2><li><a href="html/register.html">Register</a></li></h2>
+            <li><a href="index.html">Strona główna</a></li>
         </ul>
     </div>
 
@@ -43,7 +46,7 @@
         <div id="features">
             <div class="container">
                 <div class="feature">
-                    <img src="zdj/mapa.png">
+                    <img src="zdj/mapa.png" alt="Mapa Śląska">
                 </div>
             </div>
         </div>
@@ -63,12 +66,11 @@
         </div>
     </div>
 
-    <!-- Kod JavaScript na końcu dokumentu -->
+    <!-- JavaScript -->
     <script>
         function toggleMenu() {
             const menu = document.getElementById('menu');
             const hamburger = document.getElementById('hamburger');
-            // Przełącz klasę 'open' dla menu i 'active' dla przycisku hamburgera
             menu.classList.toggle('open');
             hamburger.classList.toggle('active');
         }
