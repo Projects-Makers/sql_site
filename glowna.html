@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Śląsk</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/hamburger.css">
+    <style>
+        /* Additional styles for the square */
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: none;
+            position: absolute;
+        }
+
+        .map-container {
+            position: relative;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+        <!-- Menu boczne -->
+        <nav id="menu" class="menu">
+            <div class="menu-top">
+                <div class="close-btn" onclick="toggleMenu()">&times;</div>
+            </div>
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+            </ul>
+        </nav>
+    <!-- Główna sekcja -->
+    <main id="main">
+        <section id="tresc">
+            <div class="container">
+                <div class="content">
+                    <h1>Śląsk</h1>
+                    <div class="map-container">
+                        <img src="zdj/mapa.png" alt="Mapa Śląska" id="mapImage">
+                        <div class="square" id="square"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    
