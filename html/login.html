@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Śląsk - Login</title>
-    <link rel="stylesheet" href="../style/login.css">
+    <title>Śląsk - Register</title>
+    <link rel="stylesheet" href="../style/register.css">
     <link rel="stylesheet" href="../style/responsive.css">
     <link rel="stylesheet" href="../style/hamburger.css">
 </head>
@@ -21,35 +22,37 @@
                 <a href="index.html">Śląsk</a>
             </div>
         </div>
+        <div class="menu-top">
+            <a href="login.html" class="auth-btn">Login</a>
+            </div>
     </div>
 
     <!-- Menu -->
     <nav id="menu" class="menu">
-        <div class="menu-top">
-            <div class="close-btn" onclick="toggleMenu()">&times;</div>
-            <a href="login.html" class="auth-btn">Login</a>
-            <a href="register.html" class="auth-btn">Register</a>
-        </div>
-        <ul>
-            <li><a href="index.html">Strona główna</a></li>
-        </ul>
-    </nav>
+        
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        
+    <ul>
+        <li><a href="index.html">Strona główna</a></li>
+    </ul>
+</nav>
 
-    <!-- Główna sekcja - formularz logowania -->
+    <!-- Główna sekcja - formularz rejestracji -->
     <div id="main">
-        <div class="hero">
-            <div class="container">
-                <h1>Logowanie</h1>
-                <form action="login_process.php" method="post" class="login-form">
-                    <label for="username">Nazwa użytkownika:</label>
-                    <input type="text" id="username" name="username" required>
+        <div class="container">
+            <h1>Register</h1>
+            <form action="login_process.php" method="post" class="register-form">
+                <label for="email">Nick</label>
+                <input type="email" id="email" name="email" required>
 
-                    <label for="password">Hasło:</label>
-                    <input type="password" id="password" name="password" required>
+                <label for="username">Nazwa użytkownika:</label>
+                <input type="text" id="username" name="username" required>
 
-                    <button type="submit" class="btn">Zaloguj się</button>
-                </form>
-            </div>
+                <label for="password">Hasło:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="btn">Zarejestruj się</button>
+            </form>
         </div>
     </div>
 
@@ -57,8 +60,8 @@
     <div id="footer">
         <div class="container">
             <div class="footer-links">
-                <a href="login.html">Privacy</a>
-                <a href="/html">Security</a>
+                <a href="html/privacy.html">Privacy</a>
+                <a href="html/security.html">Security</a>
                 <a href="#">Contact</a>
             </div>
             <div class="footer-logo">
@@ -67,7 +70,7 @@
         </div>
     </div>
 
-    <!-- Kod JavaScript na końcu dokumentu -->
+    <!-- JavaScript -->
     <script>
         function toggleMenu() {
             const menu = document.getElementById('menu');
@@ -78,3 +81,4 @@
     </script>
 </body>
 </html>
+    
