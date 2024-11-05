@@ -38,21 +38,73 @@
     <!-- Główna sekcja - formularz rejestracji -->
     <div id="main">
         <div class="container">
-            <h1>Register</h1>
-            <form action="login_process.php" method="post" class="register-form">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="username">Nazwa użytkownika:</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="password">Hasło:</label>
-                <input type="password" id="password" name="password" required>
-
-                <button type="submit" class="btn">Zarejestruj się</button>
-            </form>
+            <div class="register-container">
+                <h1>Rejestracja</h1>
+                <form action="register_process.php" method="post" class="register-form">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="username">Nazwa użytkownika:</label>
+                    <input type="text" id="username" name="username" required>
+    
+                    <label for="password">Hasło:</label>
+                    <input type="password" id="password" name="password" required>
+    
+                    <button type="submit" class="btn">Zarejestruj się</button>
+                </form>
+            </div>
         </div>
     </div>
+    
+    <style>
+        .register-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+        }
+    
+        .register-container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+    
+        .register-container label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #555;
+        }
+    
+        .register-container input[type="email"],
+        .register-container input[type="text"],
+        .register-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    
+        .register-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    
+        .register-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 
     <!-- Stopka -->
     <div id="footer">
