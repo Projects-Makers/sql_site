@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Śląsk - Register</title>
-    <link rel="stylesheet" href="../style/register.css">
+    <link rel="stylesheet" href="../style/login.css">
     <link rel="stylesheet" href="../style/responsive.css">
     <link rel="stylesheet" href="../style/hamburger.css">
 </head>
@@ -27,13 +27,11 @@
 
     <!-- Menu -->
     <nav id="menu" class="menu">
-        
         <div class="close-btn" onclick="toggleMenu()">&times;</div>
-        
-    <ul>
-        <li><a href="../index.php">Strona główna</a></li>
-    </ul>
-</nav>
+        <ul>
+            <li><a href="../index.php">Strona główna</a></li>
+        </ul>
+    </nav>
 
     <!-- Główna sekcja - formularz rejestracji -->
     <div id="main">
@@ -52,61 +50,12 @@
     
                     <button type="submit" class="btn">Zaloguj się</button>
                     <p><a href="register.html">Zarejestruj się</a></p>
+                    <p><a href="forgot_password.html">Zapomniałem hasła</a></p> <!-- Link do opcji zapomnienia hasła -->
                 </form>
             </div>
         </div>
     </div>
     
-    <style>
-        .register-container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-            margin: 0 auto;
-        }
-    
-        .register-container h1 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-    
-        .register-container label {
-            display: block;
-            text-align: left;
-            margin-bottom: 5px;
-            color: #555;
-        }
-    
-        .register-container input[type="email"],
-        .register-container input[type="text"],
-        .register-container input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-    
-        .register-container button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    
-        .register-container button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-
     <!-- Stopka -->
     <div id="footer">
         <div class="container">
@@ -124,7 +73,7 @@
             const menu = document.getElementById('menu');
             const hamburger = document.getElementById('hamburger');
             menu.classList.toggle('open');
-            hamburger.classList.toggle('active');
+            hamburger.classList.toggle('active'); // Poprawione z kropką
         }
     </script>
 </body>

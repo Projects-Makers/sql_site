@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="menu-top">
-            <a href="login.php" class="auth-btn">Login</a>
+            <a href="login.html" class="auth-btn">Login</a>
         </div>
     </div>
 
@@ -46,7 +46,7 @@
                     <input type="text" id="username" name="username" required>
     
                     <label for="password">Hasło:</label>
-                    <input type="password" id="password" name="password" required minlength="8" pattern="(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Hasło musi zawierać co najmniej 8 znaków, w tym jedną literę specjalną, jedną małą i jedną dużą literę.">
+                    <input type="password" id="password" name="password" required minlength="8" pattern="(?=.*[!@#$%^&*]).{8,}" title="Hasło musi zawierać co najmniej 8 znaków oraz przynajmniej jeden znak specjalny.">
     
                     <div class="terms-checkbox">
                         <input type="checkbox" id="terms" name="terms" required>
@@ -93,7 +93,7 @@
 
     <!-- JavaScript -->
     <script>
-                function toggleMenu() {
+        function toggleMenu() {
             const menu = document.getElementById('menu');
             const hamburger = document.getElementById('hamburger');
             menu.classList.toggle('open');
@@ -105,7 +105,14 @@
             var password = document.getElementById('password').value;
             var terms = document.getElementById('terms').checked;
             var emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-            var passwordRegex = /^(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            var passwordRegex = /^(?=.*[!@#$%^&*]).{8,}$/;
+            var validEndings = ['.com', '.pl', '.org', '.net']; // Dodaj inne końcówki, które chcesz zaakceptować
+            var hasValidEnding = validEndings.some(ending => email.endsWith(ending));
+            
+            if (!hasValidEnding) {
+                e.preventDefault();
+                alert('Proszę wpisać adres e-mail z poprawną końcówką (np. .com, .pl).');
+            }
             
             if (!emailRegex.test(email)) {
                 e.preventDefault();
@@ -114,7 +121,7 @@
             
             if (!passwordRegex.test(password)) {
                 e.preventDefault();
-                alert('Hasło musi zawierać co najmniej 8 znaków, w tym jedną literę specjalną, jedną małą i jedną dużą literę.');
+                alert('Hasło musi zawierać co najmniej 8 znaków oraz przynajmniej jeden znak specjalny.');
             }
 
             if (!terms) {
@@ -122,6 +129,7 @@
                 alert('Proszę zaakceptować warunki użytkowania.');
             }
         });
+
         // Pobierz elementy modalu
         var modal = document.getElementById("termsModal");
         var link = document.getElementById("termsLink");
@@ -145,3 +153,5 @@
             }
         }
     </script>
+</body>
+</html>
