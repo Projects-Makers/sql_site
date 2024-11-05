@@ -14,7 +14,7 @@ body, html {
 /* Kontener */
 .container {
     width: 100%;
-    max-width: 500px; /* Zmniejszona szerokość kontenera dla bardziej kompaktowego wyglądu */
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -28,12 +28,20 @@ body, html {
     align-items: center;
 }
 
+/* Sekcja główna */
+#main {
+    flex: 1;
+    background-color: #e0e0e0; /* Tło całej sekcji w szarym kolorze */
+    padding: 50px 0;
+    text-align: center;
+}
+
 /* Formularz rejestracji */
 .register-form {
     max-width: 100%;
     margin: 0 auto;
     padding: 30px;
-    background-color: #f6f8fa;
+    background-color: #ffffff; /* Białe tło formularza */
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -89,22 +97,6 @@ body, html {
 #menu ul li a {
     color: white;
     text-decoration: none;
-}
-
-/* Główna sekcja */
-#main {
-    flex: 1;
-}
-
-.hero {
-    background-color: #f6f8fa;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
 }
 
 /* Stopka */
