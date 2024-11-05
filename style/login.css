@@ -149,12 +149,17 @@ body, html {
 }
 
 /* Stopka */
-#footer {
-    background-color: #24292e;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    width: 100%;
+/* styles.css */
+
+/* Footer styles */
+footer {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie poziome */
+    align-items: center; /* Wyśrodkowanie pionowe */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    padding: 20px; /* Padding dla estetyki */
+    background-color: #f8f8f8; /* Tło stopki */
+    margin-top: 20px; /* Odstęp od górnych elementów */
 }
 
 .footer-links {
