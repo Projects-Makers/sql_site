@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../style/register.css">
     <link rel="stylesheet" href="../style/responsive.css">
     <link rel="stylesheet" href="../style/hamburger.css">
+    <style>
+
+    </style>
 </head>
 <body>
     <!-- Nagłówek -->
@@ -18,23 +21,20 @@
         </div>
         <div class="container">
             <div id="logo">
-                <a href="index.html">Śląsk</a>
             </div>
         </div>
         <div class="menu-top">
-            <a href="login.html" class="auth-btn">Login</a>
+            <a href="login.php" class="auth-btn">Login</a>
         </div>
     </div>
 
     <!-- Menu -->
     <nav id="menu" class="menu">
-        
         <div class="close-btn" onclick="toggleMenu()">&times;</div>
-        
-    <ul>
-        <li><a href="index.html">Strona główna</a></li>
-    </ul>
-</nav>
+        <ul>
+            <li><a href="../index.php">Strona główna</a></li>
+        </ul>
+    </nav>
 
     <!-- Główna sekcja - formularz rejestracji -->
     <div id="main">
@@ -43,73 +43,45 @@
                 <h1>Rejestracja</h1>
                 <form action="register_process.php" method="post" class="register-form">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Proszę podać prawidłowy adres e-mail (np. example@domain.com)">
     
                     <label for="username">Nazwa użytkownika:</label>
                     <input type="text" id="username" name="username" required>
     
                     <label for="password">Hasło:</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password" required minlength="8" pattern="(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Hasło musi zawierać co najmniej 8 znaków, w tym jedną literę specjalną, jedną małą i jedną dużą literę.">
     
+                    <div class="terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">Akceptuję <a href="#" id="termsLink">warunki użytkowania</a></label>
+                    </div>
+
                     <button type="submit" class="btn">Zarejestruj się</button>
-                    <p><a href="login.html">Zaloguj się</a></p>
+                    <p>Masz już konto? <a href="login.html">Zaloguj się</a></p>
                 </form>
             </div>
         </div>
-        <div class="menu-top">
-            <a href="login.html" class="auth-btn">Login</a>
+    </div>
+
+    <!-- Modal z warunkami użytkowania -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Warunki Użytkowania</h2>
+            <p>Witamy w serwisie Śląsk. Korzystając z naszej strony, zgadzasz się przestrzegać poniższych warunków:</p>
+            <ol>
+                <li>Akceptacja Warunków: Korzystając z naszej strony, akceptujesz niniejsze warunki w całości.</li>
+                <li>Prywatność: Szanujemy Twoją prywatność. Szczegóły znajdziesz w naszej Polityce Prywatności.</li>
+                <li>Konto Użytkownika: Jesteś odpowiedzialny za zachowanie poufności swojego konta i hasła.</li>
+                <li>Treści Użytkownika: Nie wolno publikować treści nielegalnych, obraźliwych lub naruszających prawa innych.</li>
+                <li>Prawa Autorskie: Szanuj prawa autorskie. Nie publikuj treści, do których nie masz praw.</li>
+                <li>Zmiany w Serwisie: Zastrzegamy sobie prawo do modyfikacji lub zakończenia świadczenia usług w dowolnym momencie.</li>
+                <li>Odpowiedzialność: Korzystasz z serwisu na własne ryzyko. Nie ponosimy odpowiedzialności za szkody wynikłe z korzystania z serwisu.</li>
+                <li>Jurysdykcja: Niniejsze warunki podlegają prawu polskiemu.</li>
+            </ol>
+            <p>Korzystając z naszego serwisu, potwierdzasz, że przeczytałeś, zrozumiałeś i zgadzasz się przestrzegać tych warunków.</p>
         </div>
     </div>
-    
-    <style>
-        .register-container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-            margin: 0 auto;
-        }
-    
-        .register-container h1 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-    
-        .register-container label {
-            display: block;
-            text-align: left;
-            margin-bottom: 5px;
-            color: #555;
-        }
-    
-        .register-container input[type="email"],
-        .register-container input[type="text"],
-        .register-container input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-    
-        .register-container button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    
-        .register-container button:hover {
-            background-color: #0056b3;
-        }
-    </style>
 
     <!-- Stopka -->
     <div id="footer">
@@ -124,12 +96,55 @@
 
     <!-- JavaScript -->
     <script>
-        function toggleMenu() {
+                function toggleMenu() {
             const menu = document.getElementById('menu');
             const hamburger = document.getElementById('hamburger');
             menu.classList.toggle('open');
             hamburger.classList.toggle('active');
         }
+
+        document.querySelector('.register-form').addEventListener('submit', function(e) {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var terms = document.getElementById('terms').checked;
+            var emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+            var passwordRegex = /^(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
+                alert('Proszę podać prawidłowy adres e-mail.');
+            }
+            
+            if (!passwordRegex.test(password)) {
+                e.preventDefault();
+                alert('Hasło musi zawierać co najmniej 8 znaków, w tym jedną literę specjalną, jedną małą i jedną dużą literę.');
+            }
+
+            if (!terms) {
+                e.preventDefault();
+                alert('Proszę zaakceptować warunki użytkowania.');
+            }
+        });
+        // Pobierz elementy modalu
+        var modal = document.getElementById("termsModal");
+        var link = document.getElementById("termsLink");
+        var span = document.getElementsByClassName("close")[0];
+    
+        // Gdy użytkownik kliknie link, otwórz modal
+        link.onclick = function(event) {
+            event.preventDefault(); // Zapobiega przekierowaniu
+            modal.style.display = "block";
+        }
+    
+        // Gdy użytkownik kliknie (x), zamknij modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    
+        // Gdy użytkownik kliknie gdziekolwiek poza modalem, zamknij go
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
-</body>
-</html>
