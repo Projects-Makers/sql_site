@@ -1,7 +1,7 @@
   <!-- Nagłówek -->
   <link rel="stylesheet" href="style/hamburger.css">
     <header id="header">
-        <div id="hamburger" class="hamburger-btn" onclick="toggleMenu()" style="margin-left: 10px">
+        <div id="hamburger" class="hamburger-btn" onclick="toggleMenu()" >
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
@@ -11,10 +11,11 @@
               <div class="close-btn" onclick="toggleMenu()">&times;</div>
           </div>
           <ul>
-              <li><a href="index.php">Strona główna</a></li>
+              <li><a href="index.php?strona=glowna">Strona główna</a></li>
           </ul>
       </nav>
         <div class="container">
         </div>
         <a href="index.php?strona=html/login" class="auth-btn">Login</a>
     </header>
+    <script src="hamburger.js"></script>

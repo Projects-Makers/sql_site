@@ -48,18 +48,10 @@
         </div>
     </div>
 
-    <!-- Stopka -->
-    <div id="footer">
-        <div class="container">
-            <div class="footer-links">
-                <a href="html/privacy.html">Privacy</a>
-                <a href="html/security.html">Security</a>
-                <a href="#">Contact</a>
-            </div>
-        </div>
-    </div>
+    <
 
     <!-- JavaScript -->
     <script src="../javascript/register.js"></script>
+    
 </body>
 </html>
