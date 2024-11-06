@@ -1,7 +1,3 @@
-
-
- 
-
     <!-- Główna sekcja - formularz rejestracji -->
     <div id="main">
         <div class="container">
@@ -22,19 +18,12 @@
                     <p><a href="forgot_password.html">Zapomniałem hasła</a></p> <!-- Link do opcji zapomnienia hasła -->
                 </form>
             </div>
-        </div>
+        </div
     </div>
     
     
 
     <!-- JavaScript -->
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            const hamburger = document.getElementById('hamburger');
-            menu.classList.toggle('open');
-            hamburger.classList.toggle('active'); // Poprawione z kropką
-        }
-    </script>
+    <script src="javascript/login.js"></script>
 </body>
 </html>
