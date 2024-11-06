@@ -1,3 +1,7 @@
+
+
+ 
+<link rel="stylesheet" href="style/login.css">
     <!-- Główna sekcja - formularz rejestracji -->
     <div id="main">
         <div class="container">
@@ -14,16 +18,23 @@
                     <input type="password" id="password" name="password" required>
     
                     <button type="submit" class="btn">Zaloguj się</button>
-                    <p><a href="index.php?html/register">Zarejestruj się</a></p>
+                    <p><a href="index.php?strona=html/register">Zarejestruj się</a></p>
                     <p><a href="forgot_password.html">Zapomniałem hasła</a></p> <!-- Link do opcji zapomnienia hasła -->
                 </form>
             </div>
-        </div
+        </div>
     </div>
     
     
 
     <!-- JavaScript -->
-    <script src="javascript/login.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const hamburger = document.getElementById('hamburger');
+            menu.classList.toggle('open');
+            hamburger.classList.toggle('active'); // Poprawione z kropką
+        }
+    </script>
 </body>
 </html>

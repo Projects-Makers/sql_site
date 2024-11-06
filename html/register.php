@@ -1,37 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Śląsk - Register</title>
-    <link rel="stylesheet" href="../style/register.css">
-    <link rel="stylesheet" href="../style/responsive.css">
-    <link rel="stylesheet" href="../style/hamburger.css">
-</head>
-<body>
-    <!-- Nagłówek -->
-    <div id="header">
-        <div id="hamburger" class="hamburger-btn" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div class="container">
-            <div id="logo">
-            </div>
-        </div>
-        <div class="menu-top">
-            <a href="login.html" class="auth-btn">Login</a>
-        </div>
-    </div>
 
-    <!-- Menu -->
-    <nav id="menu" class="menu">
-        <div class="close-btn" onclick="toggleMenu()">&times;</div>
-        <ul>
-            <li><a href="../index.php">Strona główna</a></li>
-        </ul>
-    </nav>
+   
 
     <!-- Główna sekcja - formularz rejestracji -->
     <div id="main">
@@ -92,6 +60,6 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="javascript/register.js"></script>
+    <script src="../javascript/register.js"></script>
 </body>
 </html>
