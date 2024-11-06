@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Śląsk</title>
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/hamburger.css">
+
     <style>
         /* Additional styles for the square */
         .square {
@@ -38,17 +31,9 @@
             cursor: pointer;
         }
     </style>
-</head>
-<body>
-    <!-- Menu boczne -->
-    <nav id="menu" class="menu">
-        <div class="menu-top">
-            <div class="close-btn" onclick="toggleMenu()">&times;</div>
-        </div>
-        <ul>
-            <li><a href="index.php">Strona główna</a></li>
-        </ul>
-    </nav>
+
+    <!-- Menu boczne jest w baner.html -->
+    
     <!-- Główna sekcja -->
     <main id="main">
         <section id="tresc">
@@ -96,5 +81,3 @@
             square.style.display = 'none';
         }
     </script>
-</body>
-</html>
