@@ -1,0 +1,153 @@
+/* Reset marginesów, paddingów i ustawienia struktury */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+/* Ustawienie kontenera na pełną szerokość */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Ustal maksymalną szerokość według potrzeb */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Styl nagłówka */
+#header {
+    background-color: #24292e;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Główna sekcja */
+#main {
+    flex: 1; /* Rozciąga sekcję główną, aby wypełniała resztę przestrzeni */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#tresc {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#tresc .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tresc h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+#tresc img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Stopka */
+#footer {
+    background-color: #24292e;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Styl formularza */
+.form-container {
+    background: white;
+    padding: 40px; /* Zwiększony padding */
+    border-radius: 10px; /* Zaokrąglenie rogów */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Większy cień */
+    width: 400px; /* Szerokość formularza */
+    margin: auto; /* Wyśrodkowanie formularza */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+.form-container h2 {
+    margin-bottom: 30px; /* Zwiększenie odstępu */
+    font-size: 24px; /* Zwiększenie rozmiaru nagłówka */
+    color: #333; /* Kolor nagłówka */
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold; /* Pogrubienie etykiety */
+}
+
+.form-container input {
+    width: calc(100% - 20px); /* Szerokość inputu z paddingiem */
+    padding: 15px; /* Większy padding */
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Zwiększenie rozmiaru czcionki */
+}
+
+.form-container button {
+    padding: 15px; /* Większy padding */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Zwiększenie rozmiaru czcionki */
+    transition: background-color 0.3s; /* Płynna zmiana koloru */
+}
+
+.form-container button:hover {
+    background-color: #218838; /* Zmiana koloru przy najeździe */
+}
+
+.form-container p {
+    margin-top: 20px;
+    color: #555; /* Kolor tekstu dla komunikatu */
+}
+
+/* Styl linków w stopce */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+ }
+
+.footer-logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}

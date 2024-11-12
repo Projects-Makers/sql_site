@@ -19,7 +19,7 @@
     
                     <button type="submit" class="btn">Zaloguj się</button>
                     <p><a href="index.php?strona=html/register">Zarejestruj się</a></p>
-                    <p><a href="forgot_password.html">Zapomniałem hasła</a></p> <!-- Link do opcji zapomnienia hasła -->
+                    <p><a href="index.php?strona=html/forgot_password">Zapomniałem hasła</a></p> <!-- Link do opcji zapomnienia hasła -->
                 </form>
             </div>
         </div>

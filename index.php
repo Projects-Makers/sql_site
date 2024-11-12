@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style/menu.css">
     <link rel="stylesheet" href="style/register.css">
     <link rel="stylesheet" href="style/resonsive.css">
+    <link rel="stylesheet" href="style/for.css">
     
     <?php 
     include("baner.html");
