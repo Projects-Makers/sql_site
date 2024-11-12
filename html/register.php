@@ -22,7 +22,7 @@
                     </div>
 
                     <button type="submit" class="btn">Zarejestruj się</button>
-                    <p>Masz już konto? <a href="login.html">Zaloguj się</a></p>
+                    <p>Masz już konto? <a href="index.php?strona=html/login">Zaloguj się</a></p>
                 </form>
             </div>
         </div>
