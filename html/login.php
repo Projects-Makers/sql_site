@@ -25,9 +25,5 @@
         </div>
     </div>
     
-    
-
-    <!-- JavaScript -->
-    
 </body>
 </html>

@@ -48,7 +48,6 @@
         </div>
     </div>
 
-    <
 
     <!-- JavaScript -->
     <script src="../javascript/register.js"></script>
